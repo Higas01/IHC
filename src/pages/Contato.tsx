@@ -1,31 +1,48 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import ContactModal from '@/components/ContactModal';
 
 const Contato = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] =
+    useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     setIsModalOpen(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   return (
@@ -37,8 +54,10 @@ const Contato = () => {
             Entre em Contato
           </h1>
           <p className="text-xl text-muted-foreground mb-8 animate-fade-in">
-            Estamos aqui para ajudar você a transformar suas ideias em realidade digital.
-            Vamos conversar sobre seu próximo projeto.
+            Estamos aqui para ajudar você a
+            transformar suas ideias em realidade
+            digital. Vamos conversar sobre seu
+            próximo projeto.
           </p>
         </div>
       </section>
@@ -50,38 +69,53 @@ const Contato = () => {
             {/* Contact Form */}
             <Card className="animate-fade-in">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold">Envie uma Mensagem</CardTitle>
+                <CardTitle className="text-2xl font-bold">
+                  Envie uma Mensagem
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Nome *</Label>
+                      <Label htmlFor="name">
+                        Nome *
+                      </Label>
                       <Input
                         id="name"
                         name="name"
                         value={formData.name}
-                        onChange={handleInputChange}
+                        onChange={
+                          handleInputChange
+                        }
                         required
                         className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">E-mail *</Label>
+                      <Label htmlFor="email">
+                        E-mail *
+                      </Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
                         value={formData.email}
-                        onChange={handleInputChange}
+                        onChange={
+                          handleInputChange
+                        }
                         required
                         className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
                       />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Assunto</Label>
+                    <Label htmlFor="subject">
+                      Assunto
+                    </Label>
                     <Input
                       id="subject"
                       name="subject"
@@ -90,9 +124,11 @@ const Contato = () => {
                       className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
-                    <Label htmlFor="message">Mensagem *</Label>
+                    <Label htmlFor="message">
+                      Mensagem *
+                    </Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -103,8 +139,12 @@ const Contato = () => {
                       className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
                     />
                   </div>
-                  
-                  <Button type="submit" size="lg" className="w-full hover-scale">
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full hover-scale"
+                  >
                     Enviar Mensagem
                   </Button>
                 </form>
@@ -112,47 +152,64 @@ const Contato = () => {
             </Card>
 
             {/* Contact Info */}
-            <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="space-y-8 animate-fade-in"
+              style={{ animationDelay: '0.2s' }}
+            >
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-6">
                   Outras Formas de Contato
                 </h2>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <div className="w-6 h-6 bg-primary rounded"></div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">E-mail</h3>
-                      <p className="text-muted-foreground">contato@modernsite.com</p>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        E-mail
+                      </h3>
+                      <p className="text-muted-foreground">
+                        softwarehousemcz@gmail.com
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <div className="w-6 h-6 bg-primary rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
-                      <p className="text-muted-foreground">+55 (11) 9999-9999</p>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        Telefone
+                      </h3>
+                      <p className="text-muted-foreground">
+                        +55 (11) 9999-9999
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <div className="w-6 h-6 bg-primary transform rotate-45"></div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Localização</h3>
-                      <p className="text-muted-foreground">São Paulo, SP - Brasil</p>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        Localização
+                      </h3>
+                      <p className="text-muted-foreground">
+                        São Paulo, SP - Brasil
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-secondary/10 rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">Horário de Atendimento</h3>
+                <h3 className="font-semibold text-foreground mb-3">
+                  Horário de Atendimento
+                </h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <div className="flex justify-between">
                     <span>Segunda - Sexta</span>
@@ -173,9 +230,9 @@ const Contato = () => {
         </div>
       </section>
 
-      <ContactModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </div>
   );
