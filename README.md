@@ -129,3 +129,5 @@ Desenvolvido com ❤️ pela equipe SoftwareHouseMCZ
 Autores: Higor Matheus e Matheus Ticiano
 
 Link do Figma: https://www.figma.com/design/PPSa9tzgLY69liK8STuV7D/Untitled?node-id=0-1&p=f&t=btmb8iAlaAOKFb71-0
+
+Link do deploy: https://stunning-vacherin-4345f6.netlify.app/
