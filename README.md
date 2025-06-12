@@ -128,4 +128,4 @@ Desenvolvido com ❤️ pela equipe SoftwareHouseMCZ
 
 Autores: Higor Matheus e Matheus Ticiano
 
-Link do Figma:
+Link do Figma: https://www.figma.com/design/PPSa9tzgLY69liK8STuV7D/Untitled?node-id=0-1&p=f&t=btmb8iAlaAOKFb71-0
