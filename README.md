@@ -40,11 +40,6 @@ SoftwareHouseMCZ é um website moderno e responsivo desenvolvido para uma empres
 - **React Hook Form** - Gerenciamento de formulários performático
 - **Zod** - Validação de esquemas TypeScript
 
-### Backend e Banco de Dados
-
-- **Supabase** - Backend-as-a-Service com PostgreSQL
-- **Supabase Client** - SDK para integração com o Supabase
-
 ### Funcionalidades Adicionais
 
 - **Recharts** - Biblioteca para gráficos e visualização de dados
